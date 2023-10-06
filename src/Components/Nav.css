@@ -1,0 +1,23 @@
+
+
+.nav {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(F8C900,1C2029);
+  }
+  
+  .logo-container {
+    margin-right: 10px; /* Add some space between the logo and the nav bar */
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-list li {
+    margin: 0 10px;
+    font-size: 20px;
+    justify-content: flex-end;
+  }
