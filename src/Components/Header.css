@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Radwave Demo';
+    src: url('Radwave-Demo.woff2') format('woff2'),
+         url('Radwave-Demo.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.header {
+    background: #003566;
+    color: #E5E5E5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: 30px;
+    font-family: 'Radwave Demo';
+  }
