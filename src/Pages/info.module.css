@@ -1,0 +1,60 @@
+.container {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column;
+  }
+
+  .cont2{
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+    align-items: center;
+  }
+  
+  .circleContainer {
+    border-radius: 50%; 
+    overflow: hidden; 
+    width: 400px; 
+    height: 400px;
+    margin-right: 45px;
+  }
+
+
+  .info{
+    background-color:#251F20;
+    color: #E5E5E5;
+    padding: 25px;
+    width: 45%;
+    display: flex;
+    height: 304px;
+    font-size: 24px;
+  }
+
+  .circleImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    margin-right: 20px;
+  }
+
+  .test{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 1328px;
+  }
+
+  .testimonial{
+    color:#251F20;
+  }
+
+  .content{
+    background-color: #251F20;
+    color: #E5E5E5;
+    padding: 25px;
+    font-size: 20px;
+  }

@@ -1,0 +1,165 @@
+/* Home.module.css */
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container2 {
+  display: flex;
+  justify-content: center;
+}
+
+.design {
+  margin: 25px;
+  font-size: 24px;
+  padding: 10px;
+  background-color: #251F20;
+  color: #E5E5E5;
+  width: 548px;
+}
+
+.shutters {
+  margin: 10px;
+  margin-bottom: 100px;
+}
+
+.blinds {
+  margin-top: 10px;
+}
+
+.perks {
+  margin: 25px;
+}
+
+.facts {
+  margin: 15px;
+  background-color: #251F20;
+  padding: 15px;
+  width: 316px;
+  margin-left: 30px;
+}
+
+.infoSlide {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.design h1 {
+  font-size: 24px;
+  margin: 20px;
+  margin-right: 50px;
+}
+
+.slider {
+  position: relative;
+  width: 548px; /* Adjust as needed */
+  height: 328px; /* Adjust as needed */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.prevButton,
+.nextButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 20px;
+  z-index: 10;
+}
+
+.prevButton {
+  left: 10px;
+}
+
+.nextButton {
+  right: 10px;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.activeIndicator {
+  background-color: #717171;
+}
+.facts h1 {
+  color: #E5E5E5;
+  font-size: 25px;
+}
+
+.learn-more {
+  display: flex;
+  flex-direction: column;
+  background: #251F20;
+  width: 578px;
+  height: 300px;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+.learn-more h1 {
+  margin: 15px;
+  font-size: 34px;
+  color: #E5E5E5;
+}
+
+.learn-more p {
+  margin: 15px;
+  font-size: 20px;
+  color: #E5E5E5;
+}
+
+.learn-more button {
+  color: #251F20;
+  width: 30%;
+  background-color: #E5E5E5;
+  border-radius: 15px;
+  cursor: pointer;
+  outline: none;
+  font-size: 24px;
+  margin: 15px;
+  border: none;
+  padding: 15px 25px;
+  box-shadow: 0 9px #999;
+}
+
+.learn-more button:hover {
+  color: #E5E5E5;
+  background-color: #251F20;
+  margin-right: 10px;
+  transition: all 0.5s;
+  border: 2px solid #E5E5E5;
+}
+
+.learn-more.button:active {
+  background-color: #251F20;
+  box-shadow: 0 5px #666;
+  transform: translateY(10px);
+}

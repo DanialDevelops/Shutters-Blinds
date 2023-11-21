@@ -1,0 +1,94 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .hidden-text { 
+    visibility: hidden; 
+    opacity: 0; 
+    transition: visibility 0s, opacity 0.5s; 
+  }
+
+  .mini1{
+    margin: 15px;
+    margin-bottom: 200px;
+  }
+  
+  h2 {
+    font-size: 50px;
+    color: #251F20;
+  }
+  
+  .headerSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .mini1 .shutterFeatures {
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.3s ease, visibility 0.3s ease; 
+    
+  }
+
+  .shutterFeatures {
+    background-color: #251F20; 
+    padding: 10px; 
+    margin: 10px 0; 
+    width: fit-content; 
+    position: absolute;
+    list-style-type: none;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  
+  .shutterFeatures li {
+    color: #E5E5E5;
+    border-radius: 10px;
+    background-color: #251F20;
+    padding: 5px 10px;
+    margin: 5px 0;
+  }
+  
+  .mini1:hover .PVC {
+    display: none;
+  }
+  
+  .mini1:hover .shutterFeatures {
+    opacity: 1; 
+    visibility: visible; 
+  }
+
+  .title h1 {
+    font-size: 32px;
+    margin: 15px;
+    color: #E5E5E5;
+    background-color: #251F20;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .info p {
+    font-size: 16px;
+    width: 600px;
+    text-align: center;
+    color: #E5E5E5;
+    background-color: #251F20;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+ 
+  
+ 
+  

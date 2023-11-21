@@ -1,0 +1,84 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between form and gallery as needed */
+  }
+
+  
+  
+  .header {
+    margin-bottom: 20px;
+    
+  }
+
+  .header h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    background-color: #251F20;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    color: #E5E5E5;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .form {
+    flex-basis: 45%; /* Adjust the width of form */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form input[type="text"],
+  .form input[type="tel"],
+  .form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form button {
+    background-color: #251F20; /* Your button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .form button:hover {
+    background-color: #251F20; /* Darker shade for hover effect */
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-gap: 15px; /* Adjust the gap between images as needed */
+    flex-basis: 35%; /* Adjust the width of gallery */
+  }
+  
+  .gallery img {
+    width: 100%;
+    display: block; /* Remove any extra space below the image */
+    border-radius: 4px; /* Optional: if you want rounded corners */
+    border: #251F20 solid 4px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    .form, .gallery {
+      flex-basis: 100%;
+    }
+  }
