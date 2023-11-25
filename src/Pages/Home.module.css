@@ -152,8 +152,8 @@
 
 .learn-more button:hover {
   color: #E5E5E5;
+  width: 30%;
   background-color: #251F20;
-  margin-right: 10px;
   transition: all 0.5s;
   border: 2px solid #E5E5E5;
 }

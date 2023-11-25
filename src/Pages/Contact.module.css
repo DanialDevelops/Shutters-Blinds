@@ -7,7 +7,9 @@
     gap: 20px; /* Adjust the gap between form and gallery as needed */
   }
 
-  
+  .message{
+    font-size: 34px;
+  }
   
   .header {
     margin-bottom: 20px;

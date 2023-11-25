@@ -97,12 +97,10 @@ const Services = () => {
               transform: "translate(-50%, -50%)",
             }}
           >
-            <li>a balance between privacy and visibility</li>
-            <li>ready to install and come in a variety of sizes</li>
-            <li>assist in keeping the house tidy.</li>
-            <li>
-              window treatment that is timeless, fashionable, and eye-catching
-            </li>
+            <li>You may adjust the amount of light and the brightness.</li>
+            <li>Allows you to choose cordless styles</li>
+            <li>Gives a touch of refinement to your home</li>
+            <li>Easy to maintain</li>
           </ul>
         </div>
         <div className="mini1" style={{ position: "relative" }}>
@@ -141,11 +139,13 @@ const Services = () => {
               transform: "translate(-50%, -50%)",
             }}
           >
-            <li>a balance between privacy and visibility</li>
-            <li>ready to install and come in a variety of sizes</li>
-            <li>assist in keeping the house tidy.</li>
             <li>
-              window treatment that is timeless, fashionable, and eye-catching
+              Choose blinds that provide a higher amount of privacy and safety
+              from intruders, especially for households.
+            </li>
+            <li>
+              Determine how much light should enter your room, as window
+              treatments play an important part in managing lighting.
             </li>
           </ul>
         </div>
@@ -185,11 +185,14 @@ const Services = () => {
               transform: "translate(-50%, -50%)",
             }}
           >
-            <li>a balance between privacy and visibility</li>
-            <li>ready to install and come in a variety of sizes</li>
-            <li>assist in keeping the house tidy.</li>
             <li>
-              window treatment that is timeless, fashionable, and eye-catching
+              Has built-in UV protection, which protects your flooring,
+              furniture, and artwork by preventing harmful rays.
+            </li>
+            <li>
+              Has not one but two layers of translucent fabrics, which can
+              modify light by decreasing dark shadows and dispersing light
+              across the room.
             </li>
           </ul>
         </div>
