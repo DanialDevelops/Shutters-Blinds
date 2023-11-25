@@ -1,0 +1,57 @@
+header {
+  margin-bottom: 10px;
+  background-color: #251F20;
+  padding: 10px 20px;
+  padding-bottom: 50px;
+}
+
+.logo {
+  width: 10px;
+  height: 10px;
+  margin-right: 20px;
+  margin-left: 200px;
+}
+
+
+
+.Title{
+    color: #E5E5E5;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 200px;
+    align-items: center;
+    height: 100px;
+    font-size: 60px;
+    font-family: 'Radwave Demo';
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin-right: 200px;
+  justify-content: flex-end;
+}
+
+nav li {
+  margin: 0 10px;
+  font-size: 34px;
+  color: #E5E5E5; /* Set text color to #FFD60A */
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav li:hover {
+  color: #E5E5E5;
+  transform: scale(1.1);
+}
+
+.nav-link {
+  color: #E5E5E5; /* Set text color to #FFD60A */
+  text-decoration: none;
+  border-right: 3px solid #E5E5E5;
+  padding-right: 10px;
+}

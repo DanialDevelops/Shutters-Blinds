@@ -3,8 +3,8 @@ import instaLogo from "../images/insta.png";
 
 const style = {
   footer: {
-    backgroundColor: "#003566",
-    color: "#FFD60A",
+    backgroundColor: "#251F20",
+    color: "#E5E5E5",
     padding: "1rem",
     position: "fixed",
     bottom: 0,
@@ -20,7 +20,7 @@ const style = {
     flexDirection: "row",
   },
   text: {
-    fontSize: "14px",
+    fontSize: "20px",
   },
   socialLinks: {
     display: "flex",
@@ -29,6 +29,7 @@ const style = {
   logo: {
     width: "24px",
     height: "24px",
+    color: "#E5E5E5",
     marginLeft: "8px",
     cursor: "pointer",
   },
@@ -42,7 +43,7 @@ function Footer() {
           MARQUEE SHUTTERS &copy; {new Date().getFullYear()}
         </p>
         <p style={style.text}>
-          Tel: (647) 834-6275 | Email: 
+          Tel: (647) 834-6275 | Email: marqueeshutters@gmail.com 
         </p>
         <div style={style.socialLinks}>
           <a

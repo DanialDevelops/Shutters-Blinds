@@ -1,45 +1,59 @@
-import React, { useState } from 'react';
+import React from "react";
+import { NavLink } from "react-router-dom"; // Import NavLink
 import logo from "../images/shuttersLogo.png";
-import './Nav.css';
+import "./assets/Nav.css";
+import './assets/Header.css';
 
 const Nav = () => {
-  const [activeItem, setActiveItem] = useState('Home');
-
-  const handleItemClick = (item) => {
-    setActiveItem(item);
-  };
-
   const styles = {
     image: {
-      width: "130px",
-      height: "120px",
+      display: "inline-block",
+      width: "200px",
+      height: "200px",
       objectFit: "cover",
       marginLeft: "10px",
-    }
+    },
   };
 
   return (
     <header>
       <div className="logo">
         <img
-          src={logo} 
-          alt="Shutters Logo" 
+          src={logo}
+          alt="Shutters Logo"
           style={styles.image}
-          width="130"
-          height="120"
+          width="250"
+          height="250"
           loading="lazy"
         />
       </div>
       <nav>
+        <h1 className="Title">MARQUEE SHUTTERS AND BLINDS</h1>
         <ul>
-          <li className={activeItem === 'Home' ? 'active' : ''} onClick={() => handleItemClick('Home')}>Home</li>
-          <li className={activeItem === 'About' ? 'active' : ''} onClick={() => handleItemClick('About')}>About</li>
-          <li className={activeItem === 'Services' ? 'active' : ''} onClick={() => handleItemClick('Services')}>Services</li>
-          <li className={activeItem === 'Contact' ? 'active' : ''} onClick={() => handleItemClick('Contact')}>Contact</li>
+          <li>
+            <NavLink to="/" className="nav-link" exact>
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" className="nav-link">
+              About
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/services" className="nav-link">
+              Services
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact" className="nav-link">
+              Contact
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>
   );
-}
+};
 
 export default Nav;
