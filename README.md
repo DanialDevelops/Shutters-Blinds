@@ -16,6 +16,7 @@ In this project, I developed a web application for a Shutter and Blind business 
 - HTML
 
 ### Image example of my site
+![image](https://github.com/DanialDevelops/Shutters-Blinds/assets/126214677/02854e37-7b7a-438b-bc14-ccf1e75c27b7)
 
 
 ### Future Enhancements
