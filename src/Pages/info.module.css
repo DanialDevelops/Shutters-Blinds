@@ -58,3 +58,28 @@
     padding: 25px;
     font-size: 20px;
   }
+
+  .fadeIn {
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  
+  .testimonialContainer {
+    animation-duration: 1s; /* Or however long you want the fade effect to last */
+    animation-fill-mode: both; /* Keeps the end state after the animation */
+  }
+  
+  .fadeOut {
+    animation-name: fadeOut;
+  }
+
+  

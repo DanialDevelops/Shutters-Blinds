@@ -1,58 +1,57 @@
 import React from "react";
-import { NavLink } from "react-router-dom"; // Import NavLink
+import { NavLink } from "react-router-dom";
+import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
 import logo from "../images/shuttersLogo.png";
-import "./assets/Nav.css";
-import './assets/Header.css';
 
 const Nav = () => {
-  const styles = {
-    image: {
-      display: "inline-block",
-      width: "200px",
-      height: "200px",
-      objectFit: "cover",
-      marginLeft: "10px",
-    },
-  };
+  const isActive = (path) => window.location.pathname === path;
 
   return (
-    <header>
-      <div className="logo">
-        <img
-          src={logo}
-          alt="Shutters Logo"
-          style={styles.image}
-          width="250"
-          height="250"
-          loading="lazy"
-        />
-      </div>
-      <nav>
-        <h1 className="Title">MARQUEE SHUTTERS AND BLINDS</h1>
-        <ul>
-          <li>
-            <NavLink to="/" className="nav-link" exact>
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/about" className="nav-link">
-              About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/services" className="nav-link">
-              Services
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/contact" className="nav-link">
-              Contact
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <AppBar position="static" sx={{ bgcolor: '#33658a', padding: '5px 10px' }}>
+      <Toolbar sx={{ justifyContent: 'space-between', overflowX: 'auto' }}>
+        <Box sx={{ display: 'inline-block' }}>
+          <img
+            src={logo}
+            alt="Shutters Logo"
+            style={{
+              width: "300px",
+              height: "300px",
+              objectFit: "cover",
+              marginLeft: "10px",
+            }}
+          />
+        </Box>
+        <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: '#E5E5E5', textAlign: 'center', fontSize: 62 }}>
+          MARQUEE SHUTTERS AND BLINDS
+        </Typography>
+        <Box sx={{ display: 'flex' }}>
+          {['/', '/about', '/services', '/contact'].map((path) => (
+            <Button
+              key={path}
+              component={NavLink}
+              to={path}
+              sx={{
+                color: isActive(path) ? '#E5E5E5' : 'inherit',
+                margin: '0 10px',
+                fontSize: '20px',
+                textDecoration: 'none',
+                ':hover': {
+                  bgcolor: 'rgba(255, 255, 255, 0.2)',
+                },
+                padding: '10px 15px',
+                borderRight: '3px solid #E5E5E5',
+                ':last-of-type': {
+                  borderRight: 'none',
+                },
+              }}
+              exact={path === '/'}
+            >
+              {path.substring(1) || 'Home'}
+            </Button>
+          ))}
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
 };
 

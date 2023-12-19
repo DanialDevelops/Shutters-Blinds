@@ -1,4 +1,5 @@
 import './App.css';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Header from './Components/Header';
 import Nav from './Components/Nav';
 import Home from './Pages/Home';
@@ -9,8 +10,13 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Info from './Pages/info';
 
+const theme = createTheme({
+  // Your theme options here
+});
+
 function App() {
   return (
+    <ThemeProvider theme={theme}>
     <BrowserRouter>
     <div className="App">
       
@@ -24,6 +30,7 @@ function App() {
       <Footer />
     </div>
   </BrowserRouter>
+  </ThemeProvider>
   );
 }
 

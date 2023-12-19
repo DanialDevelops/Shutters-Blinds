@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Fade } from "react-slideshow-image";
-import styles from "./info.module.css";
-import "react-slideshow-image/dist/styles.css";
+import { Box, Typography, Paper, useTheme, useMediaQuery } from "@mui/material";
+import { keyframes } from '@mui/system';
+import { styled } from '@mui/material/styles';
 
 import stove from "../images/stove.png";
 import staircase from "../images/staircase.png";
@@ -36,30 +36,54 @@ const testimonials = [
   },
 ];
 
+const fadeIn = keyframes`
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+`;
+
+const fadeOut = keyframes`
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+`;
+
+const FadeInBox = styled(Box)(({ theme }) => ({
+  animation: `${fadeIn} 2s ${theme.transitions.easing.easeInOut}`,
+}));
+
+const FadeOutBox = styled(Box)(({ theme }) => ({
+  animation: `${fadeOut} 2s ${theme.transitions.easing.easeInOut}`,
+}));
+
 const Info = () => {
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
-  const [testimonial, setTestimonial] = useState(
-    testimonials[currentTestimonialIndex]
-  );
+  const [testimonial, setTestimonial] = useState(testimonials[currentTestimonialIndex]);
+  const [animate, setAnimate] = useState(true); // State to control the animation
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      const nextIndex = (currentTestimonialIndex + 1) % testimonials.length;
-      setCurrentTestimonialIndex(nextIndex);
-      setTestimonial(testimonials[nextIndex]);
-    }, 5000);
+      setAnimate(false); // Start fade-out animation
+      setTimeout(() => {
+        const nextIndex = (currentTestimonialIndex + 1) % testimonials.length;
+        setCurrentTestimonialIndex(nextIndex);
+        setTestimonial(testimonials[nextIndex]);
+        setAnimate(true); // Start fade-in animation
+      }, 1000); // Wait for fade-out animation to complete
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, [currentTestimonialIndex, testimonials]);
 
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
   return (
-    <div className={styles.container}>
-      <div className={styles.cont2}>
-        <div className={styles.circleContainer}>
-          <img src={stove} alt="stove" className={styles.circleImage} />
-        </div>
-        <p className={styles.info}>
-          Our mission is to provide Canadian consumers with high quality and
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+      <Box sx={{ display: 'flex', justifyContent: 'center', margin: 4, alignItems: 'center', flexDirection: isMobile ? 'column' : 'row' }}>
+        <Box sx={{ borderRadius: '50%', overflow: 'hidden', width: '400px', height: '400px', marginRight: '45px' }}>
+          <img src={stove} alt="stove" style={{ width: '100%', height: '100%', objectFit: 'cover', marginRight: '20px' }} />
+        </Box>
+        <Typography variant="body1" sx={{ backgroundColor:'#33658a', color: '#E5E5E5', padding: 3, width: isMobile ? '80%' : '45%', height: '400px', fontSize: '24px' }}>
+        Our mission is to provide Canadian consumers with high quality and
           custom-made window coverings, whatever style or budget. We are routed
           in providing the highest standard of products and services to both
           retailers and customers. All our high-quality PVC shutters are built
@@ -71,16 +95,27 @@ const Info = () => {
           make sure this is the best buying decision you’ve made. We are
           continuously expanding and we would love to have you be a part of our
           growth!
-        </p>
-      </div>
-      <div className={styles.test}>
-        <h2 className={styles.testimonial}>Testimonials</h2>
-        <div className={styles.slide}>
-          <p className={styles.content}>{testimonial.quote}</p>
-          <p className={styles.content}>{testimonial.author}</p>
-        </div>
-      </div>
-    </div>
+        </Typography>
+      </Box>
+      <FadeInBox
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: 8,
+          marginBottom: 15,
+          width: '100%',
+          animation: animate ? `${fadeIn} 2s ${theme.transitions.easing.easeInOut}` : 'none',
+        }}
+      >
+        <Typography variant="h4" sx={{ color: '#251F20', marginBottom: 2 }}>Testimonials</Typography>
+        <Paper elevation={3} sx={{ backgroundColor: '#33658a', color: '#E5E5E5', padding: 3, fontSize: '20px', margin: 1 }}>
+          <Typography variant="body1">{testimonial.quote}</Typography>
+          <Typography variant="body1">{testimonial.author}</Typography>
+        </Paper>
+      </FadeInBox>
+    </Box>
   );
 };
 
